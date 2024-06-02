@@ -1,7 +1,11 @@
+"vim
 set nu
 set nuw=1
 set nowrap
 set cursorline
+map w :w<CR>
+map q :q<CR>
+"plugin
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'
@@ -10,9 +14,8 @@ Plug 'neoclide/coc.nvim',{'branch':'release'}
 call plug#end()
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
+let g:indentLine_conceallevel=0
 let g:indentLine_char_list=['┆','│']
-map q :q<CR>
-map w :w<CR>
 "coc.nvim
 hi CocFloating ctermfg=white ctermbg=darkblue
 inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
