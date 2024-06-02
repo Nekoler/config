@@ -1,6 +1,10 @@
 {
 	"suggest.insertMode": "insert",
+	"python.analysis.typeCheckingMode": "off",
 	"pyright.inlayHints.variableTypes": false,
 	"pyright.inlayHints.parameterTypes": false,
-	"pyright.inlayHints.functionReturnTypes": false
+	"pyright.inlayHints.functionReturnTypes": false,
+	"markdown-preview-enhanced.usePandocParser": true,
+	"markdown-preview-enhanced.previewTheme": "none.css",
+	"markdown-preview-enhanced.mathRenderingOption": "MathJax"
 }
