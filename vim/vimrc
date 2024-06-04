@@ -8,6 +8,8 @@ map q :q<CR>
 "plugin
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
@@ -16,6 +18,8 @@ let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 let g:indentLine_conceallevel=0
 let g:indentLine_char_list=['┆','│']
+let g:pandoc#modules#disabled=['folding', 'spell']
+let g:pandoc#biblio#bibs=[getcwd().'/Lib/bibliography.bib']
 "coc.nvim
 hi CocFloating ctermfg=white ctermbg=darkblue
 inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
