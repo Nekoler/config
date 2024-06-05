@@ -1,14 +1,12 @@
 "vim
 set nu
 set nuw=1
-set nowrap
 set cursorline
-map w :w<CR>
-map q :q<CR>
+nmap w :w<CR>
+nmap q :q<CR>
 "plugin
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -17,11 +15,9 @@ call plug#end()
 let g:airline_theme='luna'
 let g:airline_powerline_fonts=1
 let g:indentLine_char_list=['┆','│']
-if expand('%:e') == 'md'
-	let g:indentLine_conceallevel=0
-	let g:pandoc#modules#disabled=['folding', 'spell']
-	let g:pandoc#biblio#bibs=[getcwd().'/Lib/bibliography.bib']
-endif
+autocmd BufRead,BufNewFile *.md set filetype=markdown.pandoc
+autocmd BufRead,BufNewFile * if expand('%:e')!='md'|set nowrap|endif
+autocmd BufRead,BufNewFile *.json,*.md let g:indentLine_conceallevel=0
 "coc.nvim
 hi CocFloating ctermfg=white ctermbg=darkblue
-inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
+inoremap <expr> <CR> coc#pum#visible()?coc#_select_confirm():"\<CR>"
