@@ -20,4 +20,4 @@ autocmd BufRead,BufNewFile * if expand('%:e')!='md'|set nowrap|endif
 autocmd BufRead,BufNewFile *.json,*.md let g:indentLine_conceallevel=0
 "coc.nvim
 hi CocFloating ctermfg=white ctermbg=darkblue
-inoremap <expr> <CR> coc#pum#visible()?coc#_select_confirm():"\<CR>"
+inoremap <expr> <CR> coc#pum#visible()?coc#_select_confirm():'<CR>'
