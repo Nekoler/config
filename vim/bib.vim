@@ -1,5 +1,5 @@
 function! coc#source#bib#citer()
-        let filepath=expand('%:p:h').'/Lib/bibliography.bib'
+        let filepath=expand('%:p:h').'/bibliography.bib'
         if filereadable(filepath)
                 let bib_citers=[]
                 let bib_citer=readfile(filepath)
@@ -12,7 +12,7 @@ function! coc#source#bib#citer()
 endfunction
 
 function! coc#source#bib#init()
-    return {'triggerCharacters': ['@'],'triggerOnly': 0,'filetypes': ['markdown']}
+    return {'triggerCharacters': ['@'],'filetypes': ['markdown']}
 endfunction
 
 function! coc#source#bib#complete(option, cb)
