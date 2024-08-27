@@ -1,5 +1,5 @@
 function! coc#source#bib#citer()
-        let filepath=expand('%:p:h').'/bibliography.bib'
+        let filepath=expand('%:p:h').'/Bibliography.bib'
         if filereadable(filepath)
                 let bib_citers=[]
                 let bib_citer=readfile(filepath)
