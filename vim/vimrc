@@ -7,7 +7,6 @@ nmap q :q<CR>
 "plugin
 call plug#begin('~/.vim/plugged')
 Plug 'Yggdroot/indentLine'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim',{'branch':'release'}
