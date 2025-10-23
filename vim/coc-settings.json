@@ -4,5 +4,19 @@
 	"python.analysis.typeCheckingMode": "off",
 	"pyright.inlayHints.variableTypes": false,
 	"pyright.inlayHints.parameterTypes": false,
-	"pyright.inlayHints.functionReturnTypes": false
+	"pyright.inlayHints.functionReturnTypes": false,
+	"clangd.arguments": [
+		"--fallback-style=Google"
+	],
+	"languageserver": {
+		"typst": {
+			"command": "tinymist",
+			"filetypes": [
+				"typst"
+			],
+			"settings": {
+				"formatterMode": "typstyle"
+			}
+		}
+	}
 }
