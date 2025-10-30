@@ -15,7 +15,9 @@
 				"typst"
 			],
 			"settings": {
-				"formatterMode": "typstyle"
+				"fontPaths": [
+					"/system/fonts"
+				]
 			}
 		}
 	}
